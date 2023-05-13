@@ -12,5 +12,9 @@ namespace ReadData.entity
         }
 
         public DbSet<Course> Courses { get; set; }
+
+        public DbSet<Price> Price { get; set; }
+
+        public DbSet<Commentary> Comments { get; set; }
     }
 }
