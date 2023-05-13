@@ -1,0 +1,22 @@
+Steps by steps
+
+dotnet new console --framework netcoreapp3.1
+
+dotnet add package Microsoft.EntityFrameworkCore --version="3.1.2"
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version="3.1.2"
+
+
+create database CoursesOnline;
+
+use CoursesOnline
+
+create table Courses(
+	Id int primary key,
+	Titulo varchar(200),
+	Description varchar(200),
+	DatePublish datetime
+)
+
+
+
