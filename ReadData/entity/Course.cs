@@ -10,6 +10,6 @@ namespace ReadData.entity
         public string Description { get; set; }
         public DateTime? DatePublish { get; set; }
         public Price Price { get; set; }
-        public ICollection<Commentary> Comments { get; set; }
+        public ICollection<Commentary> ListComments { get; set; }
     }
 }

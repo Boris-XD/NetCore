@@ -12,13 +12,15 @@ namespace ReadData
             Console.WriteLine("Read Data");
             using(var db = new CoursesDbContext())
             {
-                var courses = db.Courses.Include(course => course.Comments);
+                var courses = db.Courses.Include(course => course.ListComments);
                 foreach(var course in courses)
                 {
                     Console.WriteLine(course.Titulo);
-                    foreach (var item in course.Comments)
+                    foreach (var item in course.ListComments)
                     {
-                        Console.WriteLine(item.Comment);
+                        Console.WriteLine("______________________");
+                        Console.WriteLine(item.Comments);
+                        Console.WriteLine("______________________");
                     }
                 }
             }

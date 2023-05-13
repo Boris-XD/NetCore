@@ -15,6 +15,6 @@ namespace ReadData.entity
 
         public DbSet<Price> Price { get; set; }
 
-        public DbSet<Commentary> Comments { get; set; }
+        public DbSet<Commentary> Commentaries { get; set; }
     }
 }
