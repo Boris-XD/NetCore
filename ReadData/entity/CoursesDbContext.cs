@@ -1,3 +1,4 @@
+using System.Security.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 
@@ -11,10 +12,15 @@ namespace ReadData.entity
             optionsBuilder.UseSqlServer(connectionString);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CourseInstructor>().HasKey(ci => new { ci.CourseId, ci.InstructorId});
+        }
+
         public DbSet<Course> Courses { get; set; }
-
         public DbSet<Price> Price { get; set; }
-
         public DbSet<Commentary> Commentaries { get; set; }
+        public DbSet<CourseInstructor> CourseInstructor { get; set; }
+        public DbSet<Instructor> Instructor { get; set; } 
     }
 }

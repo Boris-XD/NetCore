@@ -11,5 +11,6 @@ namespace ReadData.entity
         public DateTime? DatePublish { get; set; }
         public Price Price { get; set; }
         public ICollection<Commentary> ListComments { get; set; }
+        public ICollection<CourseInstructor> InstructorLink { get; set; }
     }
 }
